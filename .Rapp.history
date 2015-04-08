@@ -1,0 +1,28 @@
+cd a
+cd
+load("/Users/daniel/Universidad/LEC1/poblacion.RData")
+setwd("/Users/daniel/Universidad/LEC1")
+list.files()
+load("Poblacion.RData")
+ls()
+hist(poblacion,nclass=50)
+poblacion
+clear()
+poblacion
+muestra = sample(poblacion, 100)
+sample(poblacion, size = 100)
+sample(poblacion, size = 10)
+sample(poblacion, size = 1)
+help(sample)
+muestra = sample(poblacion)
+muestra
+poblacion.length
+length(poblacion)
+heigth(poblacion)
+help(size)
+sample(hist)
+help(hisp)
+help(hist)
+nrow(poblacion)
+muestra = sample(poblacion, size = 5)
+muestra
