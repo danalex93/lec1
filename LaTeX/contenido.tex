@@ -46,81 +46,38 @@ Utilizando el total de goles, es  decir, los goles convertidos por ambos equipos
 \end{tabular}
 \end{table}
 
-\begin{table}[ht]
-\centering
-\caption*{Total de Goles - K = 30}
-\begin{tabular}{crccc}
-  \hline
- & Limites & Marca & Mediana & Frec. Absoluta \\ 
-\hline
-  $K_{1}$ & [0, 0.4 ] & 0 & 0 & 54 \\ 
-  $K_{2}$ & ( 0.4 , 0.8 ] & NA & NA & 0 \\ 
-  $K_{3}$ & ( 0.8 , 1.2 ] & 1 & 1 & 149 \\ 
-  $K_{4}$ & ( 1.2 , 1.6 ] & NA & NA & 0 \\ 
-  $K_{5}$ & ( 1.6 , 2 ] & 2 & 2 & 151 \\ 
-  $K_{6}$ & ( 2 , 2.4 ] & NA & NA & 0 \\ 
-  $K_{7}$ & ( 2.4 , 2.8 ] & NA & NA & 0 \\ 
-  $K_{8}$ & ( 2.8 , 3.2 ] & 3 & 3 & 163 \\ 
-  $K_{9}$ & ( 3.2 , 3.6 ] & NA & NA & 0 \\ 
-  $K_{10}$ & ( 3.6 , 4 ] & 4 & 4 & 111 \\ 
-  $K_{11}$ & ( 4 , 4.4 ] & NA & NA & 0 \\ 
-  $K_{12}$ & ( 4.4 , 4.8 ] & NA & NA & 0 \\ 
-  $K_{13}$ &( 4.8 , 5.2 ] & 5 & 5 & 74 \\ 
-  $K_{14}$ & ( 5.2 , 5.6 ] & NA & NA & 0 \\ 
-  $K_{15}$ & ( 5.6 , 6 ] & 6 & 6 & 30 \\ 
-  $K_{16}$ & ( 6 , 6.4 ] & NA & NA & 0 \\ 
-  $K_{17}$ & ( 6.4 , 6.8 ] & NA & NA & 0 \\ 
-  $K_{18}$ & ( 6.8 , 7.2 ] & 7 & 7 & 27 \\ 
-  $K_{19}$ & ( 7.2 , 7.6 ] & NA & NA & 0 \\ 
-  $K_{20}$ & ( 7.6 , 8 ] & 8 & 8 & 12 \\ 
-  $K_{21}$ & ( 8 , 8.4 ] & NA & NA & 0 \\ 
-  $K_{22}$ & ( 8.4 , 8.8 ] & NA & NA & 0 \\ 
-  $K_{23}$ & ( 8.8 , 9.2 ] & 9 & 9 & 9 \\ 
-  $K_{24}$ & ( 9.2 , 9.6 ] & NA & NA & 0 \\ 
-  $K_{25}$ & ( 9.6 , 10 ] & 10 & 10 & 1 \\ 
-  $K_{26}$ & ( 10 , 10.4 ] & NA & NA & 0 \\ 
-  $K_{27}$ & ( 10.4 , 10.8 ] & NA & NA & 0 \\ 
-  $K_{28}$ & ( 10.8 , 11.2 ] & 11 & 11 & 3 \\ 
-  $K_{29}$ & ( 11.2 , 11.6 ] & NA & NA & 0 \\ 
-  $K_{30}$ & ( 11.6 , 12 ] & 12 & 12 & 1 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
 Se puede observar en todos los casos que los datos est\'{a}n fuertemente concentrados en las primeras clases, es decir, la mayor\'{i}a de los partidos finalizaron con 0, 1, 2 o 3 goles. Adem\'{a}, encontramos valores NA y frecuencias 0 en varios de las clases debido a que no existen goles con n\'{u}meros no naturales, por ejemplo, es absurdo hablar de 1.4 goles. \\
 Finalmente, podemos concluir que de nuestra muestra de 785 partidos disputados, la cantidad de goles se encuentra generalmente entre los 0 y los 3 goles anotados. \\
 
 \subsubsection{}
 Se construir\'{a}n 4 histogramas con n\'{u}mero de clases iguales a 5, 10, 30, y 100 que mostrar\'{a} la distribuci\'{o}n de frecuencias para la variable en estudio. Esto se realiz\'{o} utilizando al funci\'{o} \verb+hist+ de R. \\
 
-\begin{center}
-   Número de Clases: 5 \\
-  	\includegraphics[width=0.9\textwidth]{./imagenes/hist1} \\
-   Número de Clases: 10 \\ 
-	\includegraphics[width=0.9\textwidth]{./imagenes/hist2} \\
-   Número de Clases: 30 \\
-     	\includegraphics[width=0.9\textwidth]{./imagenes/hist3} \\
-   Número de Clases: 100 \\ 
-     	\includegraphics[width=0.9\textwidth]{./imagenes/hist4} \\
-\end{center}
+\begin{figure}
+ \subfloat[N\'{u}mero de Clases: 5]{\includegraphics[width=0.5\textwidth]{./imagenes/hist1}}
+ \subfloat[N\'{u}mero de Clases: 10]{\includegraphics[width=0.5\textwidth]{./imagenes/hist2}}
+\end{figure}
+\begin{figure}
+ \subfloat[N\'{u}mero de Clases: 30]{\includegraphics[width=0.5\textwidth]{./imagenes/hist3}}
+ \subfloat[N\'{u}mero de Clases: 100]{\includegraphics[width=0.5\textwidth]{./imagenes/hist4}}
+\end{figure}
 
 As\'{i} como nos fue posible observar mediante las tablas de la subsecci\'{o}n anterior, la distribuci\'{o}n de los goles, independiente de la cantidad de clases, est\'{a} centrada en el comienzo del histograma. Adem\'{a}s, notamos del primer histograma, que la mayor\'{i}a de los goles se centran en las clases que van entre los valores 0 y 3, pero a medida que aumentamos el n\'{u}mero de clases, es f\'{a}cil apreciar que la moda est\'{a} en los 3 goles. Nuevamente, notamos frecuencia 0 en las clases que s\'{o}lo contienen valores no enteros.\\
 
 \subsubsection{}
 Para esta \'{u}ltima subsección, realizaremos los histogramas y divisiones de clases utilizando la regla de Sturges y utilizando muestras en vez del total de nuestra poblaci\'{o}n de datos, la cual ir\'{a} variando seg\'{u}n la siguiente instrucci\'{o}n: entre 10 y 100 de 10 en 10; luego entre 100 y 700 de 100 en 100. Para esta ocaci\'{o}n, utilizaremos el comando \verb+sample+ para conseguir una muestra aleatoria de nuestra poblaci\'{o}n y \verb+hist+ para construir histogramas. Por simplicidad, se mostrar\'{a}n s\'{o}lo 5 de los 16 histogramas, de cualquier forma, los dem\'{a}s se encontrar\'{a}n en la secci\'{o}n de anexos.\\
-
-\begin{center}
+\begin{figure}
+\centering
   Tama\~{n}o muestral: 10 \\ 
-  	\includegraphics[width=0.9\textwidth]{./imagenes/histc1} \\
+  	\includegraphics[width=0.4\textwidth]{./imagenes/histc1} \\
   Tama\~{n}o muestral: 50 \\ 
-	\includegraphics[width=0.9\textwidth]{./imagenes/histc5} \\
+	\includegraphics[width=0.4\textwidth]{./imagenes/histc5} \\
   Tama\~{n}o muestral: 100 \\ 
-     	\includegraphics[width=0.9\textwidth]{./imagenes/histc10} \\
+     	\includegraphics[width=0.4\textwidth]{./imagenes/histc10} \\
   Tama\~{n}o muestral: 300 \\ 
-     	\includegraphics[width=0.9\textwidth]{./imagenes/histc13} \\
+     	\includegraphics[width=0.4\textwidth]{./imagenes/histc13} \\
   Tama\~{n}o muestral: 700 \\ 
-     	\includegraphics[width=0.9\textwidth]{./imagenes/histc15} \\	
-\end{center}
+     	\includegraphics[width=0.4\textwidth]{./imagenes/histc15} \\	
+\end{figure}
 
 Resulta sencillo concluir que los datos siguen centralizados en los primeros valores del histograma, a pesar de que la muestra es aleatoria. Por otra parte, notemos que los datos sobre 6 van apareciendo a medida que aumentamos el tama\~{o} de nuestra muestra, esto debido a que la cantidad de estos datos es bastante peque\~{n}a y la probabilidad de que aparezcan es tambi\'{e}n lo es.
 
@@ -129,6 +86,7 @@ Resulta sencillo concluir que los datos siguen centralizados en los primeros val
 \subsection{Medidas de Tendencia y Dispersi\'{o}n}
 
 \subsubsection{}
+%A
 Para nuestra variable de estudio, calcularemos la media, moda, mediana y varianza. 
 
 \begin{table}[ht]
@@ -144,6 +102,7 @@ Para nuestra variable de estudio, calcularemos la media, moda, mediana y varianz
 \end{table}
 
 \subsubsection{}
+%B
 Se realizar\'{a} la confecci\'{o}n de un boxplot para nuestra variable Total de Goles utilizando el comando \verb+boxplot+ de R:
 
 \begin{center}
@@ -151,3 +110,42 @@ Se realizar\'{a} la confecci\'{o}n de un boxplot para nuestra variable Total de 
 \end{center}
 
 Se puede observar la existencia de outliers, estos van desde los 8 (sin considerar este valor) hasta los 12 goles por partido. A pesar de la existencia de outliers, y como un buen conocedor de este deporte sabr\'{a}, una cantidad mayor a 8 goles por partido es rara vez apreciada, nuestra media no se ve afecta a ello, situaci\'{o}n que en pocas ocasiones sucede. Al contrario de los valores de media y mediana, la varianza si se ve afecta a estos outliers, por lo cual el valor de 4.193878 lo confirma. Gracias a estos valores, podemos afirmar que los partidos de mundiales la mayor\'{i} de los partidos jugados presenta una cantidad de 3 goles en total, de los cuales un equipo siempre saldr\'{a} victorioso.
+
+\subsubsection{}
+% C
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{cc}
+  \hline
+  Media & 3 \\ 
+  Moda & 3 \\ 
+  Mediana & 3 \\ 
+  Varianza & 4.193878 \\
+   \hline
+\end{tabular}
+\end{table}
+
+100.2919
+69.22969
+
+
+\subsubsection{}
+% D
+
+100.2919
+69.22969
+El coeficiente de variaci\'{o}n indica la dispersi\'{o}n de una muestra porcentualmente comparado con su media aritm\'{e}tica, y se calcula dividiendo la desviaci\'{o}n est\'{a}ndar por el valor absoluto de la media. Para los goles de Chile, se obtuvo un coeficiente de variacion de 100,29\% que representa un alto nivel de dispersion en los datos, en comparacion al coeficiente de variacion obtenido para los goles de Brasil, que es de 69,22\%. Esto significa que para el caso de Chile hay una mayor heterogeneidad en los datos, y tiene sentido ya que al observarlos, se aprecia que son pocos datos y hay un par de valores que se alejan bastante de las cifras mas repetidas. Al haber pocos datos, con algunos de ellos que se alejan bastante de la media, y con esto se produce un aumento de la variacion de dispersion. Por otro lado, en el caso de Brazil, hay una gran cantidad de datos, y la mayoria de ellos se concentran dentro de un rango (1-3 goles) y tambien cuenta con valores que se alejan de esta media. Sin embargo, al haber una gran cantidad de datos concentrados, los datos mas alejados no influyen mucho en el coeficiente de variacion, y es por eso que este valor resulta menor que el obtenido en el caso de Chile.
+
+\subsubsection{}
+% E
+Muestra 1: Moda: 2 Media: 1.918033 Mediana: 2 Varianza: 1.643169
+Muestra 2: Moda: 2 Media: 2.071429 Mediana: 2 Varianza: 2.322078
+Muestra 3: Moda: 0 Media: 1.685714 Mediana: 2 Varianza: 2.280672
+Muestra 4: Moda 3 Media: 1.941176 Mediana: 2 Varianza: 1.933824
+
+\subsubsection{}
+% F
+
+\subsubsection{}
+% G

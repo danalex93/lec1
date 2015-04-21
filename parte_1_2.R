@@ -39,3 +39,11 @@ mediaP = mean(totalGoles)
 medianaP = median(totalGoles)
 varianzaP = (length(totalGoles)-1)*var(totalGoles)/(length(totalGoles))
 boxplot(totalGoles)
+
+
+##### Parte C #####
+brazil <- append(poblacion[poblacion$equipoA == "Brazil",7],poblacion[poblacion$equipoB == "Brazil",8])
+chile <- append(poblacion[poblacion$equipoA == "Chile",7],poblacion[poblacion$equipoB == "Chile",8])
+
+coef_var_brazil <- sd(brazil)/mean(brazil)
+coef_var_chile <- sd(chile)/mean(chile)
